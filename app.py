@@ -84,7 +84,11 @@ with c2:
 # ---------- GRÁFICO ----------
 if y:
     fig = px.bar(df_f, x=x, y=y)
-    st.plotly_chart(fig, use_container_width=True)
+
+# barras 40% más delgadas
+fig.update_traces(width=0.6)
+
+st.plotly_chart(fig, use_container_width=True)
 
 # ---------- TABLA ----------
 st.subheader("Detalle")
