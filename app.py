@@ -29,7 +29,11 @@ st.markdown("""
 st.markdown('<div class="title-isalud">Dashboard COSTO_INTERCONSULTAS</div>', unsafe_allow_html=True)
 
 # ---------- DATA ----------
-df = pd.read_csv("costo_interconsultas_prueba.csv")
+df = pd.DataFrame({
+    "Periodo":[2024,2024,2025,2025],
+    "Division":["Chuquicamata","Salvador","Chuquicamata","Andina"],
+    "Costo":[120000,300000,150000,200000]
+})
 
 # ---------- SIDEBAR FILTROS ----------
 st.sidebar.header("Filtros")
